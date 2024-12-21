@@ -1,0 +1,103 @@
+html{
+    font-size: 62.5%;
+    text-align: center;
+}
+html,body{
+    margin:0;
+    padding:0;
+    background-image: url('/img/pawprintbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+  
+p{
+    font-size: 1.8rem;
+    line-height: 2;
+}
+a{
+    color: black;
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 7rem;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+.italianno-regular {
+    font-family: "Italianno", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*Utilities*/
+.container{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mission-container{
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid black;
+    gap: 2rem;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-sizing: border-box;
+}
+@media(max-width:768px){
+    .mission-container{
+        flex-direction: column;
+    }
+}
+#pet-list{
+    font-size: 2rem;
+}
+.services-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem
+}
+.services-img{
+    max-width: 30%;
+}
+@media(max-width:768px){
+    .services-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*header*/
+.site-header{
+    height: 18vh;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+}
+
+/*footer*/
+.site-footer{
+    display: flex;
+    justify-content: space-around;
+    background-color:#dedede;
+    border: black;
+    margin-top: 10rem;
+}
+.fa-brands{
+    font-size: 40px;
+    margin-top: 2rem;
+}
