@@ -10,34 +10,35 @@ let petSalon = {
     phone:"666-555-7777"
 }
 
-console.log(petSalon);
-
-//creating the pets
-let pet1 = {
-    name:"Milo",
-    age:3,
-    gender:"Male"
-}
-let pet2 = {
-    name:"Maple",
-    age:3,
-    gender:"Female"
-}
-let pet3 = {
-    name:"Ty",
-    age:16,
-    gender:"Male"
+//constructor
+function Pet(name,age,gender,breed,service){
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+    this.service=service;
 }
 
-pets.push(pet1,pet2,pet3)
-console.log(pets);
+//create the variables
+let inputName = document.getElementById("txtName");
+let inputAge = document.getElementById("txtAge");
+let inputGender = document.getElementById("txtGender");
+let inputBreed = document.getElementById("txtBreed");
+let inputService = document.getElementById("txtService");
 
-function displayNames(){
-    console.log(pets[0].name);
-    console.log(pets[1].name);
-    console.log(pets[2].name);
-
-    console.log("We have " + pets.length + " pets");
+function register(){
+    let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBreed.value, inputService.value);
+    pets.push(newPet);
+    console.log(newPet);
 }
 
-displayNames()
+//create a new pet
+function init(){
+    let pet1 = new Pet("Milo", 3, "Male", "Australian Sherpard", "Full Service");
+    let pet2 = new Pet("Maple", 3, "Female", "Pit Bull Mix", "Bath Only");
+    let pet3 = new Pet("Ty" , 16, "Male", "Border Collie Mix", "Nail Trimming");
+    
+    pets.push(pet1,pet2,pet3);
+}
+
+window.onload=init;//wait to render on HTML
