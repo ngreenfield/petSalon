@@ -11,7 +11,6 @@ function displayPet() {
                     <th>Breed</th>
                     <th>Gender</th>
                     <th>Age</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
