@@ -30,6 +30,17 @@ function register(){
     let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBreed.value, inputService.value);
     pets.push(newPet);
     console.log(newPet);
+
+    displayPet();
+    clearForm();
+}
+
+function clearForm(){
+    document.getElementById("txtName").value="";
+    document.getElementById("txtAge").value="";
+    document.getElementById("txtGender").value="";
+    document.getElementById("txtBreed").value="";
+    document.getElementById("txtService").value="";
 }
 
 //create a new pet
@@ -39,6 +50,10 @@ function init(){
     let pet3 = new Pet("Ty" , 16, "Male", "Border Collie Mix", "Nail Trimming");
     
     pets.push(pet1,pet2,pet3);
+    console.log("pets", pets);
+
+    displayPet()
 }
+
 
 window.onload=init;//wait to render on HTML
