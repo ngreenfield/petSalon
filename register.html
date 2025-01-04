@@ -18,8 +18,8 @@
             <a href="register.html">Register</a>
         </nav>
     </header>
-    <h2>Register</h2>
     <div class="register-form">
+        <h2>Register</h2>
         <div class="input-control">
             <label for="name">Name:</label>
             <input type="text" id="txtName">
@@ -40,21 +40,37 @@
         <label for="service">Service:</label>
         <select id="txtService">
             <option value="">--Select an option--</option>
-            <option value="full service">Full Service</option>
-            <option value="bath only">Bath Only</option>
-            <option value="nail trimming">Nail Trimming</option>
+            <option value="Full Service">Full Service</option>
+            <option value="Bath Only">Bath Only</option>
+            <option value="Nail Trimming">Nail Trimming</option>
         </select>
         </div>
+        <div class="input-control">
+            <label for="txtType">Type:</label>
+            <select id="txtType">
+                <option value="">--Select an option--</option>
+                <option value="Dog">Dog🐶</option>
+                <option value="Cat">Cat🐈</option>
+                <option value="Bird">Bird🦜</option>
+            </select>
+        </div>
         <div class="btn-container">
-            <button onclick="register()" class="btn-register">Register</button>
+            <button onclick="register()" class="btn btn-dark">Register</button>
         </div>
     </div>
 
     <hr>
 
     <h2>Resistered Pets</h2>
-    <div id="pets">
+    <div>
+        <p>Total: <span id="total"> 0 </span></p>
+        <p>Full Service: <span id="fsTotal">0</span></p>
+        <p>Bath Only: <span id="boTotal">0</span></p>
+        <p>Nail Trimming: <span id="ntTotal">0</span></p>
+    </div>
 
+    <div id="pets">
+    
     </div>
     
     </main>
