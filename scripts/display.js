@@ -32,7 +32,6 @@ function displayRow() {
             </tr>
         `;
     }
-
     result +=`
         </table>
         </body>
