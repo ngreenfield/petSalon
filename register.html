@@ -24,27 +24,32 @@
         <div class="input-control">
             <label for="name">Name:</label>
             <input type="text" id="txtName">
+            <small id="nameReqText" class="red-text">This field is required.</small>
         </div>
         <div class="input-control">
             <label for="age">Age:</label>
             <input type="number" id="txtAge">
+            <small id="ageReqText" class="red-text">This field is required.</small>
         </div>
          <div class="input-control">
             <label for="gender">Gender:</label>
             <input type="text" id="txtGender">
+            <small id="genderReqText" class="red-text">This field is required.</small>
         </div>
         <div class="input-control">
             <label for="breed">Breed:</label>
             <input type="text" id="txtBreed">
+            <small id="breedReqText" class="red-text">This field is required.</small>
         </div>
         <div class="input-control">
-        <label for="service">Service:</label>
-        <select id="txtService">
-            <option value="">--Select an option--</option>
-            <option value="Full Service">Full Service</option>
-            <option value="Bath Only">Bath Only</option>
-            <option value="Nail Trimming">Nail Trimming</option>
-        </select>
+            <label for="service">Service:</label>
+            <select id="txtService">
+                <option value="">--Select an option--</option>
+                <option value="Full Service">Full Service</option>
+                <option value="Bath Only">Bath Only</option>
+                <option value="Nail Trimming">Nail Trimming</option>
+            </select>
+        <small id="serviceReqText" class="red-text">This field is required.</small>
         </div>
         <div class="input-control">
             <label for="txtType">Type:</label>
@@ -54,6 +59,7 @@
                 <option value="Cat">Cat🐈</option>
                 <option value="Bird">Bird🦜</option>
             </select>
+            <small id="typeReqText" class="red-text">This field is required.</small>
         </div>
         <div class="btn-container">
             <button onclick="register()" class="btn btn-dark">Register</button>
@@ -93,7 +99,9 @@
     </div>
     </body>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
+    <script src="./scripts/storeManager.js"></script>
 </body>
 </html>

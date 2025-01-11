@@ -5,7 +5,7 @@ html{
 html,body{
     margin:0;
     padding:0;
-    background-image: url('/img/pawprintbg.jpg');
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -13,7 +13,8 @@ html,body{
 body{
     font-family: Arial;
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    padding-bottom: 15rem;
 }
   
 p{
@@ -113,9 +114,9 @@ h3{
     color: white;
 }
 /*services form*/
-
-
-
+.red-text{
+    color: red;
+}
 
 /*header*/
 .site-header{

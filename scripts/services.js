@@ -28,7 +28,7 @@ function validService(service){
         $("#priceReqText").hide();
     }
     
-    return isValidDes &&isValidPrice; // && = AND
+    return isValidDes && isValidPrice; // && = AND  - // = OR
 }
 
 //register and display

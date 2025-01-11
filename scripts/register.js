@@ -28,11 +28,12 @@ let inputBreed = document.getElementById("txtBreed");
 let inputService = document.getElementById("txtService");
 let inputType = document.getElementById("txtType");
 
+//create a new pet
 function register(){
     let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBreed.value, inputService.value, inputType.value);
     pets.push(newPet);
     console.log(newPet);
-
+    
     displayRow();
     clearForm();
     
@@ -51,12 +52,33 @@ function deletePet(petId){
     console.log("Pet id: ", petId);
     document.getElementById(petId).remove();
     pets.splice(petId,1);
-
+    
     displayRow();
     displayInfo();
 }
 
-//create a new pet
+
+function getServices(){
+    console.log("getServices function");
+    
+    let services = read();
+    let option = "";
+    
+    for(let i=0; i<services.length; i++){
+        let service = services[i];
+        console.log("service[i]: ", service)
+        
+        option +=
+        `
+        <option value="${service.description}">${service.description} -$ ${service.price}</option>
+        `
+    }
+    console.log("option: ", option);
+    
+    
+    $("#txtService").append(option);
+}
+
 function init(){
     let pet1 = new Pet("Milo", 3, "Male", "Australian Sherpard", "Full Service", "Dog");
     let pet2 = new Pet("Maple", 3, "Female", "Pit Bull Mix", "Bath Only", "Dog");
@@ -64,9 +86,17 @@ function init(){
     
     pets.push(pet1,pet2,pet3);
     console.log("pets", pets);
-
+    
     displayRow()
+    displayTypes()
+    getServices()
+    
+    $("#nameReqText").hide();
+    $("#ageReqText").hide();
+    $("#breedReqText").hide();
+    $("#serviceReqText").hide();
+    $("#typeReqText").hide();
+    $("#genderReqText").hide();
 }
-
 
 window.onload=init;//wait to render on HTML

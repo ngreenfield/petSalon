@@ -75,7 +75,14 @@ function displayInfo(){
     }
 }
 
-functiondisplayTypes()
+function displayTypes(){
+    let dogSpan = document.getElementById("dog total");
+    let dogCounter = 0;
+
+    for(let i=0; i<pets.length; i++){
+        console.log("-- pet: ", pets[i])
+    }
+}
 
 
 
